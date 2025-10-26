@@ -13,35 +13,34 @@ import java.util.ArrayList;
 public class Biblioteca {
 
     private ArrayList<Libros> libros;
-    private Autores[] autores;
+    private static Autores[] autores;
 
     public Biblioteca() {
         this.libros = new ArrayList<>();
         this.autores = new Autores[5];
 
-        Autores autor1 = new Autores("Pedro", "Quito");
+        /*Autores autor1 = new Autores("Pedro", "Quito");
         Autores autor2 = new Autores("Ana", "Guayaquil");
         Autores autor3 = new Autores("Xavier", "Cuenca");
         Autores autor4 = new Autores("Alexander", "Sucumbios");
-        Autores autor5 = new Autores("Pamela", "Orellana");
-
-        autores[0] = autor1;
-        autores[1] = autor2;
-        autores[2] = autor3;
-        autores[3] = autor4;
-        autores[4] = autor5;
+        Autores autor5 = new Autores("Pamela", "Orellana");*/
+        autores[0] = new Autores("Pame", "Ecuatoriana");
+        autores[1] = new Autores("Xavi", "Ecuatoriana");
+        autores[2] = new Autores("Alexander", "Ecuatoriana");
+        autores[3] = new Autores("Pedro", "Ecuatoriana");
+        autores[4] = new Autores("Pablo", "Ecuatoriana");
 
     }
 
     public void agregarLibros(Libros libro) {
 
-        if (libros.size() < 10) {
-            libros.add(libro);
-        } else {
+        libros.add(libro);
 
-            System.out.println("Limite de libros alcanzados");
-        }
+    }
 
+    public void actualizarLibros(int index, Libros libro) {
+
+        libros.set(index, libro);
     }
 
     public void mostrarLibros() {
@@ -53,6 +52,16 @@ public class Biblioteca {
                 System.out.println("Muestra de libros:" + a);
             }
         }
+    }
+
+    public static Autores getAutor(int index) {
+
+        if (index >= 0 && index < autores.length) {
+
+            return autores[index];
+        }
+
+        return null;
     }
 
 }
