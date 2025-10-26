@@ -12,26 +12,54 @@ package com.mycompany.libreria.uno;
  */
 public class Libros {
     
-    public String titulo;
-    public String autor;
-    public String genero;
-    public int precio;
+    private String titulo;
+    private Autores autor;
+    private String genero;
+    private int precio;
 
-    public Libros(String titulo, String autor, String genero, int precio) {
+    public Libros(String titulo, Autores autor, String genero, int precio) {
         this.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
         this.precio = precio;
     }
 
-    @Override
-    public String toString() {
-        return "Autores{" + "titulo=" + titulo + ", autor=" + autor + ", genero=" + genero + ", precio=" + precio + '}';
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Autores getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autores autor) {
+        this.autor = autor;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
     
-    /*ArrayList<Libros> p = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Autores{" + "titulo=" + titulo + autor + ", genero=" + genero + ", precio=" + precio + '}';
+    }
     
-    carrito.add(producto1); //0
-    carrito.add(producto2); //1
-    carrito.add(producto3); //2*/
 }

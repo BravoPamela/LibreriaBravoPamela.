@@ -4,10 +4,9 @@
 
 package com.mycompany.libreria;
 
-import com.mycompany.libreria.uno.Autores;
 import com.mycompany.libreria.uno.Libros;
-import java.util.ArrayList;
 import com.mycompany.libreria.uno.Autores;
+import com.mycompany.libreria.uno.Biblioteca;
 
 /**
  *
@@ -16,30 +15,24 @@ import com.mycompany.libreria.uno.Autores;
 public class Libreria {
 
     public static void main(String[] args) {
-        Autores [] p = new Autores[5];
         
-        Autores autor1 = new Autores("Pedro", "Quito");
-        Autores autor2 = new Autores("Ana", "Guayaquil");
-        Autores autor3 = new Autores("Xavier", "Cuenca");
-        Autores autor4 = new Autores("Alexander", "Sucumbios");
-        Autores autor5 = new Autores("Pamela", "Orellana");
+        Biblioteca biblioteca = new Biblioteca();
+        Libros libro1 =new Libros("Harry P", new Autores("Xavier", "Ecuatoriano"), "Misterio", 50);
+        Libros libro2 =new Libros("Orgullo y Prejuicio", new Autores("Alexander", "Ecuatoriano"), "Romantica", 40);
+        Libros libro3 =new Libros("Cien años de S", new Autores("Pamela", "Ecuatoriano"), "Realismo", 150);
+        Libros libro4 =new Libros("1984", new Autores("Liset", "Ecuatoriano"), "Ciencia Ficcion", 200);
+        Libros libro5 =new Libros("El codigo Da vinci", new Autores("Xael", "Ecuatoriano"), "Misterio", 99);
         
-        p [0] = autor1;
-        p [1] = autor2;
-        p [2] = autor3;
-        p [3] = autor4;
-        p [4] = autor5;
-        ///////////////////////////////////////////////////
+        /////////////////////////////////////////////
+        biblioteca.agregarLibros(libro1);
+        biblioteca.agregarLibros(libro2);
+        biblioteca.agregarLibros(libro3);
+        biblioteca.agregarLibros(libro4);
+        biblioteca.agregarLibros(libro5);
         
-      /*ArrayList<Libros> lib=new ArrayList<>();
-      lib.add(lib); //0
-      lib.add(lib); //1
-      lib.add(lib); //2
-      
-      lib.remove(0);*/
+        ////////////////////////////////////////////
+        biblioteca.mostrarLibros();
         
-        for (Autores a : p){
-          System.out.println("Autores:"+a);
-      }
+
     }
 }
