@@ -35,7 +35,7 @@ public class Libreria {
         System.out.println("Actualizacion");
        
         /////////////////////////
-        biblioteca.actualizarLibros(2, libro1);
+        biblioteca.actualizarLibros(0, libro1);
         biblioteca.mostrarLibros();
         
 
