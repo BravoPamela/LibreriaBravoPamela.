@@ -59,7 +59,7 @@ public class Libros {
 
     @Override
     public String toString() {
-        return "Autores{" + "titulo=" + titulo + autor + ", genero=" + genero + ", precio=" + precio + '}';
+        return "|" + "titulo=" + titulo +"| "+ autor + "| genero=" + genero + "| precio=" + precio + '|';
     }
     
 }
